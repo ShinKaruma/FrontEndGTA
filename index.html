@@ -1,26 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
-</head>
-<body>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Grand Theft Auto The Sixth</title>
+</head>
 
-        <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
+<body>
+    <div id="topnav" id="myTopnav">
+        <div class="col-2">
+            <a style="font-size:30px;cursor:pointer" onclick="openNav()" onkeypress="openNav()" tabindex="0">&#9776; Menu</a>
         </div>
-    
-    
+        <div class="col-6" class="image-container"> 
+            <img  src="assets/imgs/13138_rockstar-games-new-prev.webp" alt="logo rockstar games" width="54em" height="54em">
+        </div>
+        <div class="col-1" class="image-container">
+            <img class="center" src="assets/imgs/la-france.png" alt="Drapeau francais" width="54em" height="54em">
+        </div>
+        <div class="col-2" class="image-container">
+            <a href="panier.html" > <img src="assets/imgs/panier.png" alt="Panier" width="44em" height="44em"></a>
+        </div>
+    </div>
+
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" onkeypress="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#accueil" onclick="closeNav()" onkeypress="closeNav()">Accueil</a>
+          <a href="#apercu" onclick="closeNav()" onkeypress="closeNav()">Aperçu</a>
+          <a href="#dispo" onclick="closeNav()" onkeypress="closeNav()">Disponibilité</a>
+          <a href="#store" onclick="closeNav()" onkeypress="closeNav()">Store</a>
+          <a href="#contact" onclick="closeNav()" onkeypress="closeNav()">Contact</a>
+        </div>
+    </div>
+
+    <section id="accueil">
+        <div class="image-container">
+            <img class ="img_shadow" src="assets/imgs/gtasix_pres.png" alt="Affiche de précommande de GTA 6">
+        </div>
+        <div class="button-container">
+            <button class="achat">BUY NOW !</button>
+        </div>
+    </section>
+    <section id="apercu">
+        <div class="container">
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <div class="mySlides">
+              <div class="numbertext">1 / 6</div>
+              <img src="assets/imgs/1.png" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">2 / 6</div>
+                <img src="assets/imgs/2.jfif" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">3 / 6</div>
+                <img src="assets/imgs/3.jfif" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">4 / 6</div>
+                <img src="assets/imgs/4.jfif" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">5 / 6</div>
+                <img src="assets/imgs/5.jfif" style="width:100%">
+            </div>
+          
+            <div class="mySlides">
+              <div class="numbertext">6 / 6</div>
+                <img src="assets/imgs/6.jfif" style="width:100%">
+            </div>
+          
+            
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <diV class="presentation">
+            <h1>Vous cherchez une expérience de jeu hors du commun ? Ne cherchez plus, car GTA 6 est là pour répondre à vos attentes
+                !</h1>
+            <p>La franchise Grand Theft Auto a toujours été connue pour sa qualité de jeu exceptionnelle, et GTA 6 ne fait pas
+                exception. Avec une carte du monde encore plus grande que celle de GTA 5, vous pourrez explorer de nouveaux
+                environnements et vous immerger dans une expérience de jeu épique et inoubliable.</p>
+            <p>De plus, vous pourrez incarner différents personnages avec des histoires et des objectifs uniques, chacun offrant une
+                expérience de jeu encore plus immersive et excitante. Personnalisez votre personnage avec une variété de vêtements,
+                d'accessoires et d'armes pour vous aider à dominer les rues dangereuses de la ville.</p>
+            <p>Mais ce n'est pas tout, car GTA 6 offre également un mode multijoueur massivement en ligne, où vous pourrez jouer
+                avec des joueurs du monde entier et vous immerger dans un monde ouvert et dynamique rempli de défis, de missions et
+                de danger.</p>
+            <p>Disponible sur les principales consoles de jeux, y compris la PlayStation 5, la Xbox Series X et S et le PC, GTA 6
+                est le jeu que vous ne pouvez pas manquer. Rejoignez la communauté de fans de la série GTA et plongez dans une
+                expérience de jeu incomparable avec GTA 6 !</p>
+        </diV>
+        
+
+    </section>
+    <section id="dispo">
+        <img class="image-container" src="assets/imgs/dispo.jfif"/>
+        <p style="font-size: 32px; line-height: 100%; text-align: center; color: white;">Precommandes a partir du 31/03/2023<br/><br/>Sortie officielle: 22/04/2023*</p>
+        <p style="font-size: 16px; line-height: 100%; text-align: center; color: white;">*Les Precommandes premiums <br/>auront acces au jeu 3 jours avant</p>
+    </section>
+    <section id="store">
+        <div class="preco-container">
+            <p style="font-size: 32px; line-height: 100%; text-align: center; color: black;">Edition Normale</p>
+            <img style="width: 482px; height: 271px;" src="assets/imgs/normale.png"/>
+            <p style="font-size: 28px; line-height: 100%; color: black;">Contient:<br/>le jeu (toutes plateformes)<br/>100k$<br/>une maison</p>
+            <button style="width: 438px; height: 90px; background-color: rgba(189, 131, 17, 1); font-size: 28px; line-height: 100%; color: white;">Precommander 59.99$</button>
+        </div>
+
+        <div class="preco-container" >
+            <p style="font-size: 32px; line-height: 100%; text-align: center; color: black;">Edition Premium</p>
+            <img style="width: 368px; height: 245px;" src="assets/imgs/premium.png"/>
+            <p style="width: 448px; font-size: 28px; line-height: 100%; color: black;">Contient:<br/>le jeu (toutes plateformes)<br/>500k$<br/>un penthouse<br/>3 jours d’acces anticipe</p>
+            <button style="width: 438px; height: 90px; background-color: rgba(189, 131, 17, 1); font-size: 28px; line-height: 100%; color: white;">Precommander 79.99$</button>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container" > 
+            <p class="text-5xl text-center text-white uppercase" style="text-align:center; color: white;">Contact</p>
+            <p class="text-2xl text-center text-white uppercase" style="width: 630px; height: 24px; text-align:center; color: white;">Pour toute question concernant les offres d'emplois à Rockstar Games :</p>
+            <p class="text-2xl underline text-center text-white" style="text-align:center; color: white;">https://www.rockstargames.com/careers/</p>
+            <p class="text-2xl text-center text-white uppercase" style="width: 657px; height: 92px; text-align:center; color: white;">Pour toute information sur notre politique concernant l'utilisation de contenu avec copyright sur YouTube ou d'autres plateformes :</p>
+            <p class="text-2xl underline text-center text-white" style="width: 723px; height: 59px; text-align:center; color: white;">https://support.rockstargames.com/articles/200153756/Policy-on-posting-copyrighted-Rockstar-Games-material</p>
+            <p class="text-2xl text-center text-white uppercase" style="width: 717px; height: 72px; text-align:center; color: white;">Pour toute question d'ordre légal, veuillez contacter :</p>
+            <p class="text-2xl underline text-center text-white" style="width: 701px; height: 55px; text-align:center; color: white;">Copyright@take2games.com</p>
+        </div>
+    </section>
+
+
 </body>
 <script src="assets/js/main.js"></script>
+
 </html>
