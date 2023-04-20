@@ -1,33 +1,118 @@
-.topnav {
+@import url('https://fonts.cdnfonts.com/css/pricedown');
+
+*{
+    font-family: 'Pricedown Bl', sans-serif;
+}
+
+
+body {
+    background-color: #333;
+    
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+
+    .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+    }
+}
+
+#topnav {
     background-color: #333;
     overflow: hidden;
-  }
-  
-  .topnav a {
+    border: 0.09375em solid #FCAF17;
+    align-items: center;
+    box-sizing: border-box;
+    width: auto;
+}
+
+
+#topnav a {
     float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 0.34em 16px;
     text-decoration: none;
     font-size: 17px;
   }
   
-  .topnav a:hover {
-    background-color: #ddd;
+  /* Change the color of links on hover */
+#topnav a:hover {
+    background-color: #FCAF17;
     color: black;
   }
-  
-  .topnav a.active {
-    background-color: #04AA6D;
-    color: white;
+
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
   }
   
-  .topnav .icon {
-    display: none;
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #FCAF17;
+    border-radius: 10px;
   }
 
-  @media screen and (max-width: 600px) {
+  img.center{
+    align-self: center;
+  }
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
     .topnav a.icon {
       float: right;
@@ -35,6 +120,7 @@
     }
   }
   
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
   @media screen and (max-width: 600px) {
     .topnav.responsive {position: relative;}
     .topnav.responsive a.icon {
@@ -48,3 +134,176 @@
       text-align: left;
     }
   }
+
+
+
+
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.img_shadow{
+    box-shadow: 0 0 2em #FCAF17;
+    margin: 5vh;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+.achat {
+    padding: 2rem;
+    background-color: #FCAF17;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-size:  2rem;
+    width: 25%;
+    cursor: pointer;
+}
+
+.achat:hover{
+    box-shadow: 0 0 1em #000;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .cursor {
+    cursor: pointer;
+  }
+  
+  .prev,
+  .next {
+    display: flex;
+    cursor: pointer;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev{
+    left: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    top: 0;
+  }
+
+  .active,
+  .demo:hover {
+      opacity: 1;
+  }
+
+
+#contact{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.contact-container{
+  display: flex;
+  width: 775px;
+  height: 740px;
+  background-color: rgba(38.25, 38.25, 38.25, 1);
+  border-radius: 80px;
+  border-style: solid;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(252, 175, 23, 1);
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5385em;
+  box-shadow: 0 0 0.5em #FCAF17;
+}
+
+.preco-container{
+  display: flex;
+    width: 507px;
+    height: 662px;
+    background-color: rgba(217, 217, 217, 1);
+    border-radius: 44px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#store{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.presentation {
+  display: flex;
+  font-size: 1.3em;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+#apercu{
+  display: flex;
+}
